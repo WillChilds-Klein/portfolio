@@ -2,7 +2,7 @@
 <html>
 <title>Hello Strapdown</title>
 
-<xmp theme="united" style="display:none;">
+<xmp theme="journal" style="display:none;">
 
 # Projects
 
