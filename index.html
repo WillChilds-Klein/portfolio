@@ -4,35 +4,95 @@
 
 <xmp theme="simplex" style="display:none;">
 
-## Patent Trolls in the Tweetosphere
+## Patent Trolls in the Tweetosphere [[site]][1] [[code]][2]
 ![](img/tweets.png)
 
-_Patent Trolls in the Tweetosphere_ (live link [here](http://will.childs-kle.in/cpsc183-final/)) was a final project for Law, Technology, and Culture (CPSC 183) taught by Brad Rosen in the fall of 2014. The goal of the project was to investigate the rise of [patent trolls](https://en.wikipedia.org/wiki/Patent_troll), using Twitter as a proxy for measuring public awareness of their practices. The findings were divided into three twitter-related sections (mentions by year, mentions by state, and sentiment by year) and a breakdown of plaintiff company type for the 10 US disctrict courts most active in patent assertion cases. We found that the states containing two of the three most active patent districts (Eastern Texas, Central California) were also among the three states with the most twitter mentions of patent troll-related phrases from 2010-2014. We were also able to correlate various spikes in twitter mentions of the phrase "patent troll" or "patent monetization entity" with prominent patent cases and their reporting in the media (e.g. _Alice Corp. v. CLS Bank International_ Mar. '14 - Jun. '14).
+_Patent Trolls in the Tweetosphere_ was a final project for Law, Technology, and Culture (CPSC 183) in the fall of 2014. The goal of the
+project was to investigate the rise of [patent trolls](https://en.wikipedia.org/wiki/Patent_troll), using Twitter as a proxy for measuring
+public awareness of their practices. The findings were divided into three twitter-related sections (mentions by year, mentions by state, and
+sentiment by year) and a breakdown of plaintiff company type for the 10 US disctrict courts most active in patent assertion cases. We found
+that the states containing two of the three most active patent districts (Eastern Texas, Central California) were also among the three
+states with the most twitter mentions of patent troll-related phrases from 2010-2014. We were also able to correlate various spikes in
+twitter mentions of the phrase "patent troll" or "patent monetization entity" with prominent patent cases and their reporting in the media
+(e.g. _Alice Corp. v. CLS Bank International_ Mar. '14 - Jun. '14).
 
 ---
 
-## GroupThink
+## GroupThink [[code]][3]
 
+GroupThink was conceived as a decentralized, reputation-based recommendation network for altcoin mining resource allocation. Inspired by
+[CryptoSwitcher](https://github.com/area/CryptoSwitcher) and Cornell's [Credence project](https://www.cs.cornell.edu/people/egs/credence/),
+the general idea of GroupThink was to create a network of systems, each of which could query other nodes on the network for their expected
+profitability for a particular coin `c` at a future time `t`. The querying node then stores this information and compares the guess against
+`c`'s actual price at time `t`. Repeated over time and against many other nodes, a network member can construct a model of how successful
+other members' predictions are, and appropriately allocate mining resources or even adjust its own profitablity expectations
+accordingly.<sup>1</sup> [Miles Richardson](https://github.com/milesrichardson) and I attempted to build the system out as a final project
+for Decentralized Systems (CPSC 426) in the fall of 2014. We got the messaging system implemented, were able to spin up small clusters of
+nodes, and had begun implementing a few coin profitability models, but the scope of the project began to exceed that of a 3-week class
+project. Lesson learned: decentralized systems are hard. I hope to come back to this at some point and finish the implementation of a
+prototype.
 
+---
 
-## Yale TrueSecret
+## Yale TrueSecret [[code]][4]
 ![](img/yts.png)
 
-## wambam!
+This was an attempt at creating an immutable, uncensored forum for discrete textual posts. The site was accessible as a Tor hidden service,
+meaning that both the site's host and its visitors were anonymous to each other. This was a final project for Control, Privacy, and
+Technology (CPSC 185), motivated by the sometimes heavy-handed moderation of a pseudo-anonymous student message board<sup>2</sup> on
+Facebook. The site is no longer live due to lack of users and annoying hosting fees. A more complete description can be found
+[here](https://github.com/WillChilds-Klein/cpsc185-final/blob/master/report.md) and the code can be found here
+[here](https://github.com/WillChilds-Klein/cpsc185-final).
+
+---
+
+## wambam! [[site]][5] [[code]][6]
 ![](img/wambam.png)
 
-wambam! was a very fun project that myself and a group of 5 others built over the course of the spring '14 semester for a Software Engineering course (CPSC 439). The abbreviated pitch for the app can be stated as "uber for tasks". Essentially, we aimed to create a marketplace for favors within the Yale community. A user would sign up with their `@yale.edu` email address, and either request a task or browse tasks posted on a map to fulfill for payment. A user would request a task by dropping a pin on the app's map and enter a description of the task, expiration time date, pertinent locations other than the pin drop, their contact information, and the fee they are willing to pay for the task's completion. One obvious problem with this sort of crowd-sourcing is protecting against bad actors. Our solution to this problem was by restricting sign ups to only people with `@yale.edu` email addresses, as these are very difficult to obtain or counterfeit and are thus a workable  proxy for trust. Had we had more time to devote to the project, we would have liked to actually launch it (sadly, although the app was fully functional, this never happened) and implement a counter-offer system for task prices such that task fulfillers could negotiate fair task fees.
+wambam! was a very fun project that myself and a group of 5 others built over the course of the spring '14 semester for a Software
+Engineering course (CPSC 439). The abbreviated pitch for the app can be stated as "uber for tasks". Essentially, we aimed to create a
+marketplace for favors within the Yale community. A user would sign up with their `@yale.edu` email address, and either request a task or
+browse tasks posted on a map to fulfill for payment. A user would request a task by dropping a pin on the app's map and enter a description
+of the task, expiration time date, pertinent locations other than the pin drop, their contact information, and the fee they are willing to
+pay for the task's completion. One obvious problem with this sort of crowd-sourcing is protecting against bad actors. Our solution to this
+problem was by restricting sign ups to only people with `@yale.edu` email addresses, as these are very difficult to obtain or counterfeit
+and are thus a workable  proxy for trust. Had we had more time to devote to the project, we would have liked to actually launch it (sadly,
+although the app was fully functional, this never happened) and implement a counter-offer system for task prices such that task fulfillers
+could negotiate fair task fees.
 
 ---
 
-## BPGraph
-
-## Peerster
+## BPGraph [[code]][7]
 
 ---
 
-## Data Mining / Numerical Computation
+## Peerster [[code]][8]
 
+---
+
+## Data Mining [[code]][9] / Numerical Computation [[code]][10]
+
+---
+
+  1. Stretch goals for the project were to replace the querying system with a blockchain to make the voting/profitability records public and
+     unspoofable. The blockchain-based vote aggregation would also solve a cold-start problem with the previous implementation. Newly joined
+     nodes would have to spend some time gathering expectations from others in order to form meaningful models. With the blockchain-based
+     voting, all nodes' voting histories would be immediately accessible.
+       - ^ TODO: is this true? what was the mining incentive for this blockchain, its own altcoin? proof of mining GroupThink's currently recommended coin?
+  2. a Facebook group whose moderators posted the content of messages sent to the group's account, thus anonymizing the "poster" only from
+     the group's readership but not its moderators. This mediated model is also subject to the moderators' discretion in messages to post; it
+     does not truly a public utility for free expression.
+
+[1]: http://will.childs-kle.in/cpsc183-final/
+[2]: https://github.com/WillChilds-Klein/cpsc183-final
+[3]: https://github.com/WillChilds-Klein/groupminer
+[4]: https://github.com/WillChilds-Klein/cpsc185-final
+[5]: http://wambam.herokuapp.com/
+[6]: https://github.com/milesrichardson/wambam-cs439-spring-2014
+[7]: https://github.com/WillChilds-Klein/BGrap://github.com/WillChilds-Klein/BGraph
+[8]: https://github.com/WillChilds-Klein/peerste://github.com/WillChilds-Klein/peerster
+[9]: https://github.com/WillChilds-Klein/cpsc445
+[10]: https://github.com/WillChilds-Klein/cpsc440
 
 </xmp>
 
