@@ -10,11 +10,11 @@
 _Patent Trolls in the Tweetosphere_ was a final project for Law, Technology, and Culture (CPSC 183) in the fall of 2014. The goal of the
 project was to investigate the rise of [patent trolls](https://en.wikipedia.org/wiki/Patent_troll), using Twitter as a proxy for measuring
 public awareness of their practices. The findings were divided into three twitter-related sections (mentions by year, mentions by state, and
-sentiment by year) and a breakdown of plaintiff company type for the 10 US disctrict courts most active in patent assertion cases. We found
-that the states containing two of the three most active patent districts (Eastern Texas, Central California) were also among the three
-states with the most twitter mentions of patent troll-related phrases from 2010-2014. We were also able to correlate various spikes in
-twitter mentions of the phrase "patent troll" or "patent monetization entity" with prominent patent cases and their reporting in the media
-(e.g. _Alice Corp. v. CLS Bank International_ Mar. '14 - Jun. '14).
+sentiment by year) and a patent case count by plaintiff company type for the 10 US district courts most active in patent assertion cases. We
+found that Texas and California, which contain two of the three most active patent districts in the US, were also among the three states
+that produced the most troll-related tweets from 2010-2014. We were also able to correlate various spikes in twitter mentions of the phrase
+"patent troll" or "patent monetization entity" with prominent patent cases and their reporting in the media (e.g. _Alice Corp. v.  CLS Bank
+International_ Mar. '14 - Jun. '14).
 
 ---
 
@@ -23,54 +23,53 @@ twitter mentions of the phrase "patent troll" or "patent monetization entity" wi
 GroupThink was conceived as a decentralized, reputation-based recommendation network for altcoin mining resource allocation. Inspired by
 [CryptoSwitcher](https://github.com/area/CryptoSwitcher) and Cornell's [Credence project](https://www.cs.cornell.edu/people/egs/credence/),
 the general idea of GroupThink was to create a network of systems, each of which could query other nodes on the network for their expected
-profitability for a particular coin `c` at a future time `t`. The querying node then stores this information and compares the guess against
-`c`'s actual price at time `t`. Repeated over time and against many other nodes, a network member can construct a model of how successful
+profitability for a particular coin `c` at a future time `t`. The querying node then stores this prediction and compares it against
+`c`'s actual price at time `t`. Repeated over time and against many other nodes, a network member can construct a model of how accurate
 other members' predictions are, and appropriately allocate mining resources or even adjust its own profitablity expectations
-accordingly.<sup>1</sup> [Miles Richardson](https://github.com/milesrichardson) and I attempted to build the system out as a final project
-for Decentralized Systems (CPSC 426) in the fall of 2014. We got the messaging system implemented, were able to spin up small clusters of
-nodes, and had begun implementing a few coin profitability models, but the scope of the project began to exceed that of a 3-week class
-project. Lesson learned: decentralized systems are hard. I hope to come back to this at some point and finish the implementation of a
-prototype.
+accordingly.<sup>1</sup> A partner and I attempted to build the system out as a final project for Decentralized Systems (CPSC 426) in the
+fall of 2014. We got the messaging system implemented, were able to spin up small clusters of nodes, and had begun implementing a few coin
+profitability models, but the scope of the project began to exceed that of a 3-week class project. Lesson learned: decentralized systems are
+hard. I hope to come back to this at some point and finish implementing a prototype.
 
 ---
 
 ## Yale TrueSecret [[code]][4]
 ![](img/yts.png)
 
-This was an attempt at creating an immutable, uncensored forum for discrete textual posts. The site was accessible as a Tor hidden service,
-meaning that both the site's host and its visitors were anonymous to each other. This was a final project for Control, Privacy, and
-Technology (CPSC 185), motivated by the sometimes heavy-handed moderation of a pseudo-anonymous student message board<sup>2</sup> on
-Facebook. The site is no longer live due to lack of users and annoying hosting fees. A more complete description can be found
-[here](https://github.com/WillChilds-Klein/cpsc185-final/blob/master/report.md).
+This was an attempt at creating an immutable, uncensored forum for discrete textual posts. The site was accessible as a [Tor hidden
+service](https://www.torproject.org/docs/hidden-services.html.en), meaning that the site's host and visitors were mutually anonymous. This
+was a final project for Control, Privacy, and Technology (CPSC 185), motivated by the sometimes heavy-handed moderation of a
+pseudo-anonymous student message board<sup>2</sup> on Facebook. The site is no longer live due to lack of users and annoying hosting fees. A
+more complete description can be found [here](https://github.com/WillChilds-Klein/cpsc185-final/blob/master/report.md).
 
 ---
 
 ## wambam! [[site]][5] [[code]][6]
 ![](img/wambam.png)
 
-wambam! was a very fun project that myself and a group of 5 others built over the course of the spring '14 semester for a Software
+wambam! was a very fun project that a team of 5 other students and I built over the course of the spring '14 semester for a Software
 Engineering course (CPSC 439). The abbreviated pitch for the app can be stated as "uber for tasks". Essentially, we aimed to create a
 marketplace for favors within the Yale community. A user would sign up with an email address, and either request a task or browse tasks
 posted on a map to fulfill for payment. A user would request a task by dropping a pin on the app's map and enter a description of the task,
-expiration time date, pertinent locations (other than the pin drop), their contact information, and the fee they are willing to pay for the
-task's completion. Payment was facilitated by [venmo](https://venmo.com/) integration. One obvious problem with this sort of crowd-sourcing
-is protecting against bad actors. Our solution to this problem was restricting registration to `@yale.edu` email addresses, as emails of
-this domain are difficult to obtain spuriously or counterfeit, and thus serve as a workable  proxy for trust. Had we had more time to devote
-to the project, we would have liked to actually launch it (sadly, although the app was fully functional, this never happened) and implement
-a counter-offer system for task prices such that task fulfillers could negotiate fair fees.
+expiration date and time, pertinent locations (other than the pin drop), their contact information, and the fee they would be willing to pay for
+the task's completion. Payment was facilitated by [venmo](https://venmo.com/) integration. One obvious challenge with this sort of
+crowd-sourcing is protecting against bad actors. Our solution to restrict user registration to `@yale.edu` email addresses,
+as emails of this domain are difficult to obtain spuriously or to counterfeit, and thus serve as a workable  proxy for trust. Had we had more
+time to devote to the project, we would have liked to actually launch it (sadly, although the app was fully functional, this never happened)
+and implement a counter-offer system for task prices such that task fulfillers could negotiate fair fees.
 
 ---
 
 ## BPGraph [[code]][7]
 
-This was a project undertaken over 8 week's under the advisement of [Ankur Mani](http://www.isye.umn.edu/faculty/Mani.shtml) in the Human
+This was a project undertaken over 8 weeks under the advisement of [Ankur Mani](http://www.isye.umn.edu/faculty/Mani.shtml) in the Human
 Dynamics group at the MIT Media Lab in the summer of 2013. The goal of the project was to create a step-by-step interactive visualization of
 an algorithm Ankur had devised as part of his thesis work. This algorithm was a generalization of the [Hungarian
-Algorithm](https://en.wikipedia.org/wiki/Hungarian_algorith://en.wikipedia.org/wiki/Hungarian_algorithm) for solving the [assignment
+Algorithm](https://en.wikipedia.org/wiki/Hungarian_algorithm) for solving the [assignment
 problem](https://en.wikipedia.org/wiki/Assignment_problem) in bipartite matching scenarios. I implemented this project in Java, having no
 real experience in web technologies. The visualization GUI was successfully implemented, as was the most of the original Hungarian
-algorithm, but not enough time was left for implementing Ankur's novel contributions, sadly. Lesson learned: Java is not at home on the web,
-and always allocate 2-3x as much time as you think you may need for GUI programming.
+algorithm, but not enough time was left for implementing Ankur's novel contributions. Lesson learned: Java is not at home on the web, and
+always allocate 2-3x as much time as you think you may need for GUI programming.
 
 ---
 
@@ -79,8 +78,9 @@ and always allocate 2-3x as much time as you think you may need for GUI programm
 Built over the course of fall 2014's Decentralized Systems (CPSC 426), Peerster is a basic decentralized UDP messaging application written
 in C++ with the Qt framework. Peerster communicates with other instances (Peers) via the [Gossip
 Protocol](https://en.wikipedia.org/wiki/Gossip_protocol). It sports a basic graphical interface with a group chat window, direct message
-window, and a text entry box, [NAT hole-punching](https://en.wikipedia.org/wiki/UDP_hole_punching) to subvert rudimentary firewalls, message
-history replay for newly joined nodes, and even supports (searchable) bit torrent-like file sharing for decentralized file storage.
+window, and a text entry box, performs [NAT hole-punching](https://en.wikipedia.org/wiki/UDP_hole_punching) to subvert rudimentary
+firewalls, replays message history for newly joined nodes, and even supports (searchable) bit torrent-like file sharing for decentralized
+file storage.
 
 ---
 
@@ -89,12 +89,12 @@ history replay for newly joined nodes, and even supports (searchable) bit torren
 This entry is not a discrete project. The code in these repositories comprises 6 assignments over two semester-long courses. Among problems
 solved by some of the assignments are the [Jacobi method](https://en.wikipedia.org/wiki/Jacobi_method) for
 [finding](https://github.com/WillChilds-Klein/cpsc445/blob/master/jacobi.c) the
-[SVD](https://en.wikipedia.org/wiki/Singular_value_decomposition) of square a matrix, the
+[SVD](https://en.wikipedia.org/wiki/Singular_value_decomposition) of a square matrix, the
 [Gram-Schmidt](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process) [method for matrix
 inversion](https://github.com/WillChilds-Klein/cpsc440/blob/master/inv_double_gs.c), a nifty method for
 [finding](https://github.com/WillChilds-Klein/cpsc445/blob/master/seek.c) some `k` nearest neighbors for each of `n` 2-dimentional points,
-and other numerical methods. The code is all dependency-free (aside from standard system libraries) ANSI C, and can all handle large input
-sizes reasonably efficiently.
+and other numerical methods. The code is all dependency-free (aside from standard system libraries) ANSI C, and can handle large input sizes
+reasonably efficiently.
 
 ---
 
@@ -103,9 +103,9 @@ sizes reasonably efficiently.
      nodes would have to spend some time gathering expectations from others in order to form meaningful models. With the blockchain-based
      voting, all nodes' voting histories would be immediately accessible. There remains the problem of determining an incentive for mining
      voting blocks. TODO \[expand\]
-  2. a Facebook group whose moderators posted the content of messages sent to the group's account, thus anonymizing the "poster" only from
-     the group's readership but not its moderators. This mediated model is also subject to the moderators' discretion in messages to post; it
-     does not truly a public utility for free expression.
+  2. A Facebook group whose moderators posted the content of messages sent to the group's account, thus anonymizing the "poster" only from
+     the group's readership but not its moderators. The content of this mediated model is also subject to the moderators' discretion; it
+     is not a truly neutral forum for free expression.
 
 [1]: http://will.childs-kle.in/cpsc183-final/
 [2]: https://github.com/WillChilds-Klein/cpsc183-final
