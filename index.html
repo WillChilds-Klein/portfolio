@@ -41,8 +41,7 @@ This was an attempt at creating an immutable, uncensored forum for discrete text
 meaning that both the site's host and its visitors were anonymous to each other. This was a final project for Control, Privacy, and
 Technology (CPSC 185), motivated by the sometimes heavy-handed moderation of a pseudo-anonymous student message board<sup>2</sup> on
 Facebook. The site is no longer live due to lack of users and annoying hosting fees. A more complete description can be found
-[here](https://github.com/WillChilds-Klein/cpsc185-final/blob/master/report.md) and the code can be found here
-[here](https://github.com/WillChilds-Klein/cpsc185-final).
+[here](https://github.com/WillChilds-Klein/cpsc185-final/blob/master/report.md).
 
 ---
 
@@ -51,14 +50,14 @@ Facebook. The site is no longer live due to lack of users and annoying hosting f
 
 wambam! was a very fun project that myself and a group of 5 others built over the course of the spring '14 semester for a Software
 Engineering course (CPSC 439). The abbreviated pitch for the app can be stated as "uber for tasks". Essentially, we aimed to create a
-marketplace for favors within the Yale community. A user would sign up with their `@yale.edu` email address, and either request a task or
-browse tasks posted on a map to fulfill for payment. A user would request a task by dropping a pin on the app's map and enter a description
-of the task, expiration time date, pertinent locations other than the pin drop, their contact information, and the fee they are willing to
-pay for the task's completion. One obvious problem with this sort of crowd-sourcing is protecting against bad actors. Our solution to this
-problem was by restricting sign ups to only people with `@yale.edu` email addresses, as these are very difficult to obtain or counterfeit
-and are thus a workable  proxy for trust. Had we had more time to devote to the project, we would have liked to actually launch it (sadly,
-although the app was fully functional, this never happened) and implement a counter-offer system for task prices such that task fulfillers
-could negotiate fair task fees.
+marketplace for favors within the Yale community. A user would sign up with an email address, and either request a task or browse tasks
+posted on a map to fulfill for payment. A user would request a task by dropping a pin on the app's map and enter a description of the task,
+expiration time date, pertinent locations (other than the pin drop), their contact information, and the fee they are willing to pay for the
+task's completion. Payment was facilitated by [venmo](https://venmo.com/) integration. One obvious problem with this sort of crowd-sourcing
+is protecting against bad actors. Our solution to this problem was restricting registration to `@yale.edu` email addresses, as emails of
+this domain are difficult to obtain spuriously or counterfeit, and thus serve as a workable  proxy for trust. Had we had more time to devote
+to the project, we would have liked to actually launch it (sadly, although the app was fully functional, this never happened) and implement
+a counter-offer system for task prices such that task fulfillers could negotiate fair fees.
 
 ---
 
@@ -87,15 +86,23 @@ history replay for newly joined nodes, and even supports (searchable) bit torren
 
 ## Data Mining [[code]][9] / Numerical Computation [[code]][10]
 
-This entry is less a project, and more a 
+This entry is not a discrete project. The code in these repositories comprises 6 assignments over two semester-long courses. Among problems
+solved by some of the assignments are the [Jacobi method](https://en.wikipedia.org/wiki/Jacobi_method) for
+[finding](https://github.com/WillChilds-Klein/cpsc445/blob/master/jacobi.c) the
+[SVD](https://en.wikipedia.org/wiki/Singular_value_decomposition) of square a matrix, the
+[Gram-Schmidt](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process) [method for matrix
+inversion](https://github.com/WillChilds-Klein/cpsc440/blob/master/inv_double_gs.c), a nifty method for
+[finding](https://github.com/WillChilds-Klein/cpsc445/blob/master/seek.c) some `k` nearest neighbors for each of `n` 2-dimentional points,
+and other numerical methods. The code is all dependency-free (aside from standard system libraries) ANSI C, and can all handle large input
+sizes reasonably efficiently.
 
 ---
 
   1. Stretch goals for the project were to replace the querying system with a blockchain to make the voting/profitability records public and
      unspoofable. The blockchain-based vote aggregation would also solve a cold-start problem with the previous implementation. Newly joined
      nodes would have to spend some time gathering expectations from others in order to form meaningful models. With the blockchain-based
-     voting, all nodes' voting histories would be immediately accessible.
-       - ^ TODO: is this true? what was the mining incentive for this blockchain, its own altcoin? proof of mining GroupThink's currently recommended coin?
+     voting, all nodes' voting histories would be immediately accessible. There remains the problem of determining an incentive for mining
+     voting blocks. TODO \[expand\]
   2. a Facebook group whose moderators posted the content of messages sent to the group's account, thus anonymizing the "poster" only from
      the group's readership but not its moderators. This mediated model is also subject to the moderators' discretion in messages to post; it
      does not truly a public utility for free expression.
