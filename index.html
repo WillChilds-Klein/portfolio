@@ -44,6 +44,18 @@ more complete description can be found [here](https://github.com/WillChilds-Klei
 
 ---
 
+## Minder [[code]][11]
+![](img/minder.png)
+
+`minder` is a simple application written in Clojure (a LISP dialect) whose sole objective is to remind the current president (and his
+constituents) of his civic duties whenever his stubby little thumbs wander astray during a meeting. The application is deployed in a
+"serverless" fashion on AWS Lambda. Whenever @realDonaldTrump fires off a tweet, `minder` pulls his daily schedule and checks whether the
+tweet was sent during a scheduled meeting. If a conflict is detected, `minder` emits a tweet calling it out. The schedule checking logic is
+exceedingly rudimentary; it considers a conflict to be any tweet sent between two scheduled meetings and within 90 minutes of the first.
+This was my frist foray into learning a LISP, so the implementation is probably less than idiomatic.
+
+---
+
 ## wambam! [[site]][5] [[code]][6]
 ![](img/wambam.png)
 
@@ -114,10 +126,11 @@ with reasonable efficiently.
 [4]: https://github.com/WillChilds-Klein/cpsc185-final
 [5]: http://wambam.herokuapp.com/
 [6]: https://github.com/milesrichardson/wambam-cs439-spring-2014
-[7]: https://github.com/WillChilds-Klein/BGrap://github.com/WillChilds-Klein/BGraph
-[8]: https://github.com/WillChilds-Klein/peerste://github.com/WillChilds-Klein/peerster
+[7]: https://github.com/WillChilds-Klein/BGraph
+[8]: https://github.com/WillChilds-Klein/peerster
 [9]: https://github.com/WillChilds-Klein/cpsc445
 [10]: https://github.com/WillChilds-Klein/cpsc440
+[11]: https://github.com/willchilds-klein/minder
 
 </xmp>
 
