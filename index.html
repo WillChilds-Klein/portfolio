@@ -64,13 +64,12 @@ function of the "app" is arbitrary, but requirements were simple and rigid:
 
   1. the API should scale from one to O(10k) users with miminal developer intervention (and note empty my pockets in the process)
   1. the app should be secure and authenticated
-  1. the API should be strongly consistent
   1. the app should be portable for other deployment strategies and easily extensible for futher development
 
 The "frontend" is quite rudiemntary (really just a proof of concept), implemented in [React.js][18]. For the API, I settled on the [Flask
 framework][15] in python deployed on top of [AWS Lambda][16] (orchestrated by a really [neat project called "zappa"][17]), backed by
-[DynamoDB][18] as a data store. The usage of Lambda/DynamoDB satisfies 1. and 3. (both services are fully elastic), and usage of Flask/zappa
-satisfies 4. (a Flask app can be deployed easily on any conventional linux machine). 2., however, was a bit more challenging. The primary
+[DynamoDB][18] as a data store. The usage of Lambda/DynamoDB satisfies 1. (both services are fully elastic), and usage of Flask/zappa
+satisfies 3. (a Flask app can be deployed easily on any conventional linux machine). 2., however, was a bit more challenging. The primary
 deployment mode (Lambda) required the API to work in a distributed fashion, but by default Flask uses in memory session management. So, I
 had to roll my own token-based auth. The solution I eventually settled on was using filling the `Authorization` HTTP header with a signed
 token with a fixed expiration timestamp. This ceded the possibility of revocation (as any signed token sent to the server before its expiry
